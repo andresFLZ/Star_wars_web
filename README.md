@@ -1,1 +1,2 @@
-# Star_wars_web
+# Star wars web
+Proyecto en desarrollo que funcionara como base de datos de personajes, peliculas, planetas, etc...
