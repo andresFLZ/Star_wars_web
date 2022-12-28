@@ -1,0 +1,25 @@
+#mainNav {
+    background-color: #3A3C55;
+    border-bottom: solid #ffe81f 2px;
+}
+
+#mainNav a {
+    color: #fffcd9;
+}
+
+#mainNav .navbar-brand {
+    margin-right: 25px;
+}
+
+#menu .nav-item .nav-link {
+    font-size: 20px;
+}
+
+/*#menu .nav-item .active{
+    -webkit-text-stroke: 0.5px #ffe81f;
+}*/
+
+#mainNav .navbar-toggler i {
+    color: #fffcd9;
+}
+
