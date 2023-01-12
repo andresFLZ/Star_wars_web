@@ -19,4 +19,10 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Star_wars_app.urls')),
+    path('personajes/', include('personajes.urls')),
+    path('peliculas/', include('peliculas.urls')),
+    path('especies/', include('especies.urls')),
+    path('planetas/', include('planetas.urls')),
+    path('naves/', include('naves.urls')),
+    path('vehiculos/', include('vehiculos.urls')),
 ]

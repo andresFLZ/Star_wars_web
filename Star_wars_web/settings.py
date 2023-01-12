@@ -39,7 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Star_wars_app',
+    'Star_wars_app.apps.StarWarsAppConfig',
+    'personajes.apps.PersonajesConfig',
+    'peliculas.apps.PeliculasConfig',
+    'especies.apps.EspeciesConfig',
+    'planetas.apps.PlanetasConfig',
+    'naves.apps.NavesConfig',
+    'vehiculos.apps.VehiculosConfig',
 ]
 
 MIDDLEWARE = [
