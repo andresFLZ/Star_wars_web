@@ -1,3 +1,9 @@
+body {
+    background: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 #mainNav {
     background-color: #3A3C55;
     border-bottom: solid #ffe81f 2px;

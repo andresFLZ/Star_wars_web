@@ -23,7 +23,7 @@
             <div class="container-fluid">
             
                 <!-- icono o nombre -->
-                <a class="navbar-brand" href="">
+                <a class="navbar-brand" href="{% url 'Star_wars_app:Inicio' %}">
                     <i class="fa-brands fa-galactic-republic fa-2x"></i>
                 </a>
                     
@@ -36,25 +36,25 @@
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="{% url 'Star_wars_app:Inicio' %}">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="personajes/">Personajes</a>
+                            <a class="nav-link" href="{% url 'Star_wars_app:Personajes' %}">Personajes</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="peliculas/">Peliculas</a>
+                            <a class="nav-link" href="{% url 'Star_wars_app:Peliculas' %}">Peliculas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="especies/">Especies</a>
+                            <a class="nav-link" href="{% url 'Star_wars_app:Especies' %}">Especies</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="planetas/">Planetas</a>
+                            <a class="nav-link" href="{% url 'Star_wars_app:Planetas' %}">Planetas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="naves/">Naves</a>
+                            <a class="nav-link" href="{% url 'Star_wars_app:Naves' %}">Naves</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="vehiculos/">Vehiculos</a>
+                            <a class="nav-link" href="{% url 'Star_wars_app:Vehiculos' %}">Vehiculos</a>
                         </li>
                     </ul>
                 </div>
