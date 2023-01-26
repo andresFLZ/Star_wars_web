@@ -2,5 +2,83 @@
 {% load static %}
 
 {% block content %}
-    <p>Inicio</p>
+<div class="container" id="contenido">
+    <div class="row fila_inicio">
+        <div class="col-12 intro">
+            <p>Bienvenido a una pagina no oficial sobre star wars :D.</p>
+            <p>Es un proyecto personal en donde podras encontrar información sobre las peliculas de la franquicia, sus personajes, planetas, etc.</p>
+            <p>Construí esta pagina usando esta <a href="https://swapi.dev/">api</a> donde se encuentra toda la información que recolecté para la creación de la pagina.</p>
+            <p>Espero te guste :D</p>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="contenido">
+    <div class="row fila_inicio">
+        <div class="col-8">
+            <h1><a href="{% url 'personajes:Personajes' %}">Personajes</a></h1>
+            <p>Los heroes y villanos que aparecen en cada pelicula, echales un vistazo.</p>
+        </div>
+        <div class="col-4 columna">
+            <div class="imagen">
+                <i class="fa-solid fa-jedi"></i>
+            </div>
+        </div>
+    </div>
+    <div class="row fila_inicio">
+        <div class="col-8">
+            <h1><a href="{% url 'peliculas:Peliculas' %}">Peliculas</a></h1>
+            <p>Todas las peliculas de la saga y sus Caracteristicas.</p>
+        </div>
+        <div class="col-4 columna">
+            <div class="imagen">
+                <i class="fa-brands fa-old-republic"></i>
+            </div>
+        </div>
+    </div>
+    <div class="row fila_inicio">
+        <div class="col-8">
+            <h1><a href="{% url 'especies:Especies' %}">Especies</a></h1>
+            <p>Encuentra todas las especies del universo star wars.</p>
+        </div>
+        <div class="col-4 columna">
+            <div class="imagen">
+                <i class="fa-solid fa-dna"></i>
+            </div>
+        </div>
+    </div>
+    <div class="row fila_inicio">
+        <div class="col-8">
+            <h1><a href="{% url 'planetas:Planetas' %}">Planetas</a></h1>
+            <p>Todos los planetas en los que se viven las aventuras.</p>
+        </div>
+        <div class="col-4 columna">
+            <div class="imagen">
+                <i class="fa-solid fa-earth-europe"></i>
+            </div>
+        </div>
+    </div>
+    <div class="row fila_inicio">
+        <div class="col-8">
+            <h1><a href="{% url 'naves:Naves' %}">Naves</a></h1>
+            <p>Super naves espaciales, me gustaría subir a una de ellas.</p>
+        </div>
+        <div class="col-4 columna">
+            <div class="imagen">
+                <i class="fa-solid fa-jet-fighter-up"></i>
+            </div>
+        </div>
+    </div>
+    <div class="row fila_inicio">
+        <div class="col-8">
+            <h1><a href="{% url 'vehiculos:Vehiculos' %}">Vehiculos</a></h1>
+            <p>De alguna forma tienen que transportarse nuestros heroes.</p>
+        </div>
+        <div class="col-4 columna">
+            <div class="imagen">
+                <i class="fa-brands fa-galactic-senate"></i>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -29,6 +29,100 @@ body {
     color: #fffcd9;
 }
 
+#contenido {
+    background-color: #fffcd9;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: solid #ffe81f 3px;
+}
+
+#contenido .fila_inicio {
+    min-height: 130px;
+}
+
+#contenido .fila_inicio .columna {
+    display: flex;
+    align-items: center;
+}
+
+#contenido .fila_inicio .intro p {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#contenido .fila_inicio p {
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+#contenido .fila_inicio h1 {
+    margin: 10px 0;
+}
+
+#contenido .fila_inicio h1 a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.8s linear 0.2s;
+}
+
+#contenido .fila_inicio h1 a:hover {
+    color: #584F0A;
+}
+
+#contenido .fila_inicio .imagen{
+    width:25vh;
+    max-width:100px;
+    height:25vh;
+    max-height:100px;
+    position:relative;
+    background:white;
+    border-radius: 50px;
+    margin: 10px auto ;
+    border: solid #ffe81f 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contenido .fila_inicio .imagen i {
+    font-size: 4rem;
+}
+
+#contenido .fila {
+    min-height: 200px;
+    border-bottom: solid #ffe81f 3px;
+}
+
+/*#contenido .fila .columna {
+    display: flex;
+    align-items: center;
+}*/
+
+#contenido .fila .columna .imagen{
+    width:25vh;
+    max-width:80px;
+    height:25vh;
+    max-height:80px;
+    position:relative;
+    background:white;
+    border-radius: 50px;
+    margin: 10px auto ;
+    border: solid #ffe81f 2px;
+}
+
+#contenido .fila .columna h1 {
+    width: 60%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#contenido .fila .columna p {
+    width: 40%;
+    margin: 10px auto;
+    text-align: center;
+}
+
 #footer {
     background-color: #3A3C55;
     border-top: solid #ffe81f 2px;
