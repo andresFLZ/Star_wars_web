@@ -45,14 +45,18 @@ body {
     align-items: center;
 }
 
+#contenido .fila_inicio .intro h1 {
+    text-align: center;
+}
+
 #contenido .fila_inicio .intro p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin: 10px 0;
     text-align: center;
 }
 
 #contenido .fila_inicio p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin: 10px 0;
 }
 
@@ -89,15 +93,34 @@ body {
     font-size: 4rem;
 }
 
+#contenido .fila_personaje {
+    min-height: 60px;
+}
+
+#contenido .fila_personaje .columna {
+    display: flex;
+    align-items: center;
+}
+
+#contenido .fila_personaje .columna p {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+#contenido .fila_personaje .columna a {
+    margin: auto auto;
+    padding: .375rem 1.2rem;
+}
+
+.btn-primary {
+    background-color: #163359;
+    border-color: #163359;
+}
+
 #contenido .fila {
     min-height: 200px;
     border-bottom: solid #ffe81f 3px;
 }
-
-/*#contenido .fila .columna {
-    display: flex;
-    align-items: center;
-}*/
 
 #contenido .fila .columna .imagen{
     width:25vh;

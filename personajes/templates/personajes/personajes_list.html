@@ -1,0 +1,40 @@
+{% extends "Star_wars_app/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container" id="contenido">
+        <div class="row fila_inicio">
+            <div class="col-12 intro">
+                <h1>Personajes</h1>
+                <p>Aquí podras ver a los personajes que han ido apareciendo a lo largo de la saga. Podras ver a detalle a cada personaje y caracteristicas del mismo, tales como:</p>
+                <ul>
+                    <li>Nombre</li>
+                    <li>Año nacimiento</li>
+                    <li>Genero</li>
+                    <li>Planeta de origen</li>
+                    <li>Peliculas en las que ha aparecido</li>
+                    <li>Especie</li>
+                    <li>Naves espaciales que ha piloteado</li>
+                    <li>Vehiculos que ha piloteado</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contenido">
+        {% if object_list %}
+        {% for personaje in object_list %}
+        <div class="row fila_personaje">
+            <div class="col-8 columna">
+                <p>{{ personaje.nombre }}</p>
+            </div>
+            <div class="col-4 columna">
+                <a class="btn btn-primary" href="{% url 'personajes:Detail' %}" role="button">Ver</a>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No hay registro de personajes</p>
+        {% endif %}
+    </div>
+{% endblock %}
