@@ -1,5 +1,11 @@
 from django.shortcuts import render
+from django.views.generic.list import ListView
+from .models import Especie
 
-def especies (request):
+def especiesDetail (request):
 
-    return render(request, "especies/especies.html")
+    return render(request, "especies/especies_detail.html")
+
+class EspeciesList(ListView):
+    model = Especie
+    template_name = "especies/especies_list.html"

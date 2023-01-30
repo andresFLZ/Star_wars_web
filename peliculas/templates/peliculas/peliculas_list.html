@@ -1,0 +1,41 @@
+{% extends "Star_wars_app/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container" id="contenido">
+        <div class="row fila_inicio">
+            <div class="col-12 intro">
+                <h1>Peliculas</h1>
+                <p>Aquí podras ver a las Peliculas que han ido saliendo a lo largo de la historia. Podras ver a detalle cada pelicula y caracteristicas de la misma, tales como:</p>
+                <ul>
+                    <li>Titulo</li>
+                    <li>Episodio</li>
+                    <li>Director</li>
+                    <li>Fecha de lanzamiento</li>
+                    <li>Especies que aparecen</li>
+                    <li>Naves espaciales que aparecen</li>
+                    <li>Vehiculos que aparecen</li>
+                    <li>Personajes espaciales que aparecen</li>
+                    <li>Planetas espaciales que aparecen</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contenido">
+        {% if object_list %}
+        {% for pelicula in object_list %}
+        <div class="row fila_personaje">
+            <div class="col-8 columna">
+                <p>{{ pelicula.titulo }}</p>
+            </div>
+            <div class="col-4 columna">
+                <a class="btn btn-primary" href="{% url 'personajes:Detail' %}" role="button">Ver</a>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No hay registro de peliculas</p>
+        {% endif %}
+    </div>
+{% endblock %}

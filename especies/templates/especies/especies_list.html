@@ -1,0 +1,39 @@
+{% extends "Star_wars_app/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container" id="contenido">
+        <div class="row fila_inicio">
+            <div class="col-12 intro">
+                <h1>Especies</h1>
+                <p>Aquí podras ver a las especies que forman parte del universo star wars. Podras ver a detalle todas las especies y caracteristicas de cada una, tales como:</p>
+                <ul>
+                    <li>Nombre</li>
+                    <li>Clasificación</li>
+                    <li>Designación</li>
+                    <li>Lenguaje</li>
+                    <li>Planeta de origen</li>
+                    <li>Personajes pertenecientes a la especie</li>
+                    <li>Peliculas en las que la especie ha aparecido</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contenido">
+        {% if object_list %}
+        {% for especie in object_list %}
+        <div class="row fila_personaje">
+            <div class="col-8 columna">
+                <p>{{ especie.nombre }}</p>
+            </div>
+            <div class="col-4 columna">
+                <a class="btn btn-primary" href="{% url 'especies:Detail' %}" role="button">Ver</a>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No hay registro de personajes</p>
+        {% endif %}
+    </div>
+{% endblock %}

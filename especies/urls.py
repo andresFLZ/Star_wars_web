@@ -1,7 +1,8 @@
 from django.urls import path
-from especies import views
+from especies.views import EspeciesList, especiesDetail
 
 app_name = 'especies'
 urlpatterns = [
-    path('', views.especies, name="Especies"),
+    path('', EspeciesList.as_view(), name='Especies'),
+    path('detail/', especiesDetail, name="Detail"),
 ]

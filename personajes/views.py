@@ -2,10 +2,6 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from .models import Personaje
 
-def personajes (request):
-
-    return render(request, "personajes/personajes.html")
-
 def personajesDetail (request):
 
     return render(request, "personajes/personajes_detail.html")
