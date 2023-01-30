@@ -1,0 +1,39 @@
+{% extends "Star_wars_app/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container" id="contenido">
+        <div class="row fila_inicio">
+            <div class="col-12 intro">
+                <h1>Naves</h1>
+                <p>Aquí podras ver a las naves espaciales que viajan a lo largo de la galaxia. Podras ver a detalle todas las naves y caracteristicas de cada una, tales como:</p>
+                <ul>
+                    <li>Nombre</li>
+                    <li>Modelo</li>
+                    <li>Clase</li>
+                    <li>Costo</li>
+                    <li>Maxima velocidad</li>
+                    <li>Peliculas en las que aparece la nave</li>
+                    <li>pilotos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contenido">
+        {% if object_list %}
+        {% for nave in object_list %}
+        <div class="row fila_personaje">
+            <div class="col-8 columna">
+                <p>{{ nave.nombre }}</p>
+            </div>
+            <div class="col-4 columna">
+                <a class="btn btn-primary" href="{% url 'naves:Detail' %}" role="button">Ver</a>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No hay registro de naves</p>
+        {% endif %}
+    </div>
+{% endblock %}

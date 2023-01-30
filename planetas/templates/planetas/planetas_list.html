@@ -1,0 +1,40 @@
+{% extends "Star_wars_app/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container" id="contenido">
+        <div class="row fila_inicio">
+            <div class="col-12 intro">
+                <h1>Planetas</h1>
+                <p>Aquí podras ver a los planetas en donde muchas aventuras ocurren. Podras ver a detalle todos los planetas y caracteristicas de cada uno, tales como:</p>
+                <ul>
+                    <li>Nombre</li>
+                    <li>Diametro</li>
+                    <li>Periodo de rotación</li>
+                    <li>Periodo de orbitación</li>
+                    <li>Gravedad</li>
+                    <li>Población</li>
+                    <li>Personajes que viven en el planeta</li>
+                    <li>Peliculas en las que ha aparecido el planeta</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contenido">
+        {% if object_list %}
+        {% for planeta in object_list %}
+        <div class="row fila_personaje">
+            <div class="col-8 columna">
+                <p>{{ planeta.nombre }}</p>
+            </div>
+            <div class="col-4 columna">
+                <a class="btn btn-primary" href="{% url 'planetas:Detail' %}" role="button">Ver</a>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No hay registro de planetas</p>
+        {% endif %}
+    </div>
+{% endblock %}
