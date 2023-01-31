@@ -17,3 +17,13 @@ class Personaje(models.Model):
 
     def __str__(self):
         return self.nombre
+
+    def devolverNaves(self):
+        personaje = Personaje.objects.get(nombre=self.nombre)
+        naves = personaje.naves.all()
+        return naves
+
+    def devolverVehiculos(self):
+        personaje = Personaje.objects.get(nombre=self.nombre)
+        vehiculos = personaje.vehiculos.all()
+        return vehiculos

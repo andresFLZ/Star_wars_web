@@ -23,3 +23,8 @@ class Pelicula(models.Model):
 
     def __str__(self):
         return self.titulo
+
+    def devolverPersonajes(self):
+        pelicula = Pelicula.objects.get(titulo=self.titulo)
+        personajes = pelicula.personajes.all()
+        return personajes

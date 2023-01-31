@@ -9,22 +9,26 @@
                 <div class="imagen">
 
                 </div>
-                <h1>nombre</h1>
-                <p>nombre</p>
+                <h1>Nombre.</h1>
+                <p>{{ object.nombre }}</p>
             </div>
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
 
                 </div>
-                <h1>año nacimiento</h1>
-                <p>año nacimiento</p>
+                <h1>Año de nacimiento.</h1>
+                {% if object.anio_nacimiento == 'desconocida' %}
+                <p>El año de nacimiento de {{ object.nombre }} es desconocido</p>
+                {% else %}
+                <p>{{ object.anio_nacimiento }}</p>
+                {% endif %}
             </div>
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
 
                 </div>
-                <h1>genero</h1>
-                <p>genero</p>
+                <h1>Genero.</h1>
+                <p>{{ object.genero }}</p>
             </div>
         </div>
         <div class="row fila">
@@ -32,22 +36,40 @@
                 <div class="imagen">
 
                 </div>
-                <h1>planeta origen</h1>
-                <p>planeta origen</p>
+                <h1>Planeta de origen.</h1>
+                {% if object.planeta_nacimiento == 'unknown' %}
+                <p>El planeta de origen de {{ object.nombre }} es desconocido</p>
+                {% else %}
+                <p>{{ object.planeta_nacimiento }}</p>
+                {% endif %}
             </div>
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
 
                 </div>
-                <h1>peliculas</h1>
-                <p>peliculas</p>
+                <h1>Peliculas en las que aparece {{ object.nombre }}.</h1>
+                {% for pelicula in peliculas %}
+                    {% for personaje in pelicula.devolverPersonajes %}
+                    {% if object.nombre == personaje.nombre %}
+                    <p>{{ pelicula.titulo }}</p>
+                    {% endif %}
+                    {% endfor %}
+                {% endfor %}
             </div>
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
 
                 </div>
                 <h1>especie</h1>
-                <p>especie</p>
+                {% if object.nombre in esp.devolverPersonajesEspecie %}
+                {% for especie in especies %}
+                    {% if object.nombre in especie.devolverPersonajes %}
+                        <p>{{ especie.nombre }}</p>
+                    {% endif %}    
+                {% endfor %}
+                {% else %}
+                <p>La especies de {{ object.nombre }} es desconocida</p>
+                {% endif %}
             </div>
         </div>
         <div class="row fila">
@@ -55,15 +77,27 @@
                 <div class="imagen">
 
                 </div>
-                <h1>naves espaciales</h1>
-                <p>naves espaciales</p>
+                <h1>naves espaciales que ha pilotado {{ object.nombre }}</h1>
+                {% if object.devolverNaves %}
+                    {% for nave in object.devolverNaves %}
+                    <p>{{ nave.nombre }}</p>
+                    {% endfor %}
+                {% else %}
+                <p>{{ object.nombre }} no ha pilotado ninguna nave</p>
+                {% endif %}
             </div>
             <div class="col-xs-12 col-md-6 columna">
                 <div class="imagen">
 
                 </div>
-                <h1>vehiculos</h1>
-                <p>vehiculos</p>
+                <h1>vehiculos que ha pilotado {{ object.nombre }}</h1>
+                {% if object.devolverVehiculos %}
+                    {% for vehiculo in object.devolverVehiculos %}
+                    <p>{{ vehiculo.nombre }}</p>
+                    {% endfor %}
+                {% else %}
+                <p>{{ object.nombre }} no ha manejado ningun vehiculo</p>
+                {% endif %}
             </div>
         </div>
     </div>

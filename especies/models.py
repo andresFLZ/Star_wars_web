@@ -17,3 +17,25 @@ class Especie(models.Model):
 
     def __str__(self):
         return self.nombre
+
+    def devolverPersonajesEspecie(self):
+        especies = Especie.objects.all()
+        personajesN = []
+
+        for especie in especies:
+            personajes = especie.personajes.all()
+        
+            for personaje in personajes:
+                personajesN.append(personaje.nombre)
+        
+        return personajesN
+
+    def devolverPersonajes(self):
+        especie = Especie.objects.get(nombre=self.nombre)
+        personajes = especie.personajes.all()
+        personajesN = []
+        
+        for personaje in personajes:
+            personajesN.append(personaje.nombre)
+        
+        return personajesN
