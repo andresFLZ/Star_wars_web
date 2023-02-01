@@ -28,7 +28,7 @@
                 <p>{{ vehiculo.nombre }}</p>
             </div>
             <div class="col-4 columna">
-                <a class="btn btn-primary" href="{% url 'vehiculos:Detail' %}" role="button">Ver</a>
+                <a class="btn btn-primary" href="{% url 'vehiculos:Detail' vehiculo.id %}" role="button">Ver</a>
             </div>
         </div>
         {% endfor %}

@@ -14,7 +14,6 @@
                     <li>Periodo de orbitación</li>
                     <li>Gravedad</li>
                     <li>Población</li>
-                    <li>Personajes que viven en el planeta</li>
                     <li>Peliculas en las que ha aparecido el planeta</li>
                 </ul>
             </div>
@@ -29,7 +28,7 @@
                 <p>{{ planeta.nombre }}</p>
             </div>
             <div class="col-4 columna">
-                <a class="btn btn-primary" href="{% url 'planetas:Detail' %}" role="button">Ver</a>
+                <a class="btn btn-primary" href="{% url 'planetas:Detail' planeta.id %}" role="button">Ver</a>
             </div>
         </div>
         {% endfor %}

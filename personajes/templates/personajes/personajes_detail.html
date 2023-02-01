@@ -64,7 +64,7 @@
                 <div class="imagen">
                     <i class="fa-solid fa-people-group"></i>
                 </div>
-                <h1>especie</h1>
+                <h1>Especie.</h1>
                 {% if object.nombre in esp.devolverPersonajesEspecie %}
                 {% for especie in especies %}
                     {% if object.nombre in especie.devolverPersonajes %}
@@ -81,7 +81,7 @@
                 <div class="imagen">
                     <i class="fa-brands fa-space-awesome"></i>
                 </div>
-                <h1>naves espaciales que ha pilotado {{ object.nombre }}</h1>
+                <h1>Naves espaciales que ha pilotado {{ object.nombre }}.</h1>
                 {% if object.devolverNaves %}
                     <div>
                         <ul>
@@ -98,7 +98,7 @@
                 <div class="imagen">
                     <i class="fa-solid fa-car"></i>
                 </div>
-                <h1>vehiculos que ha pilotado {{ object.nombre }}</h1>
+                <h1>Vehiculos que ha pilotado {{ object.nombre }}.</h1>
                 {% if object.devolverVehiculos %}
                     <div>
                         <ul>

@@ -27,3 +27,27 @@ class Personaje(models.Model):
         personaje = Personaje.objects.get(nombre=self.nombre)
         vehiculos = personaje.vehiculos.all()
         return vehiculos
+
+    def devolverNombresNave(self):
+        personajes = Personaje.objects.all()
+        navesN = []
+
+        for personaje in personajes:
+            naves = personaje.naves.all()
+        
+            for nave in naves:
+                navesN.append(nave.nombre)
+        
+        return navesN
+
+    def devolverNombresVehiculo(self):
+        personajes = Personaje.objects.all()
+        vehiculosN = []
+
+        for personaje in personajes:
+            vehiculos = personaje.vehiculos.all()
+        
+            for vehiculo in vehiculos:
+                vehiculosN.append(vehiculo.nombre)
+        
+        return vehiculosN

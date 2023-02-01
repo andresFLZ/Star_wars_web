@@ -28,7 +28,7 @@
                 <p>{{ nave.nombre }}</p>
             </div>
             <div class="col-4 columna">
-                <a class="btn btn-primary" href="{% url 'naves:Detail' %}" role="button">Ver</a>
+                <a class="btn btn-primary" href="{% url 'naves:Detail' nave.id %}" role="button">Ver</a>
             </div>
         </div>
         {% endfor %}
