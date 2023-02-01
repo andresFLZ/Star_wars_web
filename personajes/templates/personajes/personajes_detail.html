@@ -7,14 +7,14 @@
         <div class="row fila">
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
-
+                    <i class="fa-solid fa-person"></i>
                 </div>
                 <h1>Nombre.</h1>
                 <p>{{ object.nombre }}</p>
             </div>
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
-
+                    <i class="fa-regular fa-calendar-check"></i>
                 </div>
                 <h1>Año de nacimiento.</h1>
                 {% if object.anio_nacimiento == 'desconocida' %}
@@ -25,7 +25,7 @@
             </div>
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
-
+                    <i class="fa-solid fa-venus-mars"></i>
                 </div>
                 <h1>Genero.</h1>
                 <p>{{ object.genero }}</p>
@@ -34,7 +34,7 @@
         <div class="row fila">
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
-
+                    <i class="fa-solid fa-earth-americas"></i>
                 </div>
                 <h1>Planeta de origen.</h1>
                 {% if object.planeta_nacimiento == 'unknown' %}
@@ -45,20 +45,24 @@
             </div>
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
-
+                    <i class="fa-solid fa-film"></i>
                 </div>
                 <h1>Peliculas en las que aparece {{ object.nombre }}.</h1>
-                {% for pelicula in peliculas %}
-                    {% for personaje in pelicula.devolverPersonajes %}
-                    {% if object.nombre == personaje.nombre %}
-                    <p>{{ pelicula.titulo }}</p>
-                    {% endif %}
+                <div>
+                    <ul>
+                    {% for pelicula in peliculas %}
+                        {% for personaje in pelicula.devolverPersonajes %}
+                        {% if object.nombre == personaje.nombre %}
+                        <li>{{ pelicula.titulo }}</li>
+                        {% endif %}
+                        {% endfor %}
                     {% endfor %}
-                {% endfor %}
+                    </ul>
+                </div>
             </div>
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
-
+                    <i class="fa-solid fa-people-group"></i>
                 </div>
                 <h1>especie</h1>
                 {% if object.nombre in esp.devolverPersonajesEspecie %}
@@ -68,33 +72,41 @@
                     {% endif %}    
                 {% endfor %}
                 {% else %}
-                <p>La especies de {{ object.nombre }} es desconocida</p>
+                <p>La especie de {{ object.nombre }} es desconocida</p>
                 {% endif %}
             </div>
         </div>
         <div class="row fila">
             <div class="col-xs-12 col-md-6 columna">
                 <div class="imagen">
-
+                    <i class="fa-brands fa-space-awesome"></i>
                 </div>
                 <h1>naves espaciales que ha pilotado {{ object.nombre }}</h1>
                 {% if object.devolverNaves %}
-                    {% for nave in object.devolverNaves %}
-                    <p>{{ nave.nombre }}</p>
-                    {% endfor %}
+                    <div>
+                        <ul>
+                        {% for nave in object.devolverNaves %}
+                        <li>{{ nave.nombre }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
                 {% else %}
                 <p>{{ object.nombre }} no ha pilotado ninguna nave</p>
                 {% endif %}
             </div>
             <div class="col-xs-12 col-md-6 columna">
                 <div class="imagen">
-
+                    <i class="fa-solid fa-car"></i>
                 </div>
                 <h1>vehiculos que ha pilotado {{ object.nombre }}</h1>
                 {% if object.devolverVehiculos %}
-                    {% for vehiculo in object.devolverVehiculos %}
-                    <p>{{ vehiculo.nombre }}</p>
-                    {% endfor %}
+                    <div>
+                        <ul>
+                        {% for vehiculo in object.devolverVehiculos %}
+                        <li>{{ vehiculo.nombre }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
                 {% else %}
                 <p>{{ object.nombre }} no ha manejado ningun vehiculo</p>
                 {% endif %}
