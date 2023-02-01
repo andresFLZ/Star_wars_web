@@ -28,3 +28,23 @@ class Pelicula(models.Model):
         pelicula = Pelicula.objects.get(titulo=self.titulo)
         personajes = pelicula.personajes.all()
         return personajes
+
+    def devolverEspecies(self):
+        pelicula = Pelicula.objects.get(titulo=self.titulo)
+        especies = pelicula.especies.all()
+        return especies
+
+    def devolverNaves(self):
+        pelicula = Pelicula.objects.get(titulo=self.titulo)
+        naves = pelicula.naves.all()
+        return naves
+
+    def devolverVehiculos(self):
+        pelicula = Pelicula.objects.get(titulo=self.titulo)
+        vehiculos = pelicula.vehiculos.all()
+        return vehiculos
+
+    def devolverPlanetas(self):
+        pelicula = Pelicula.objects.get(titulo=self.titulo)
+        planetas = pelicula.planetas.all()
+        return planetas
