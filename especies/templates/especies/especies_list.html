@@ -28,7 +28,7 @@
                 <p>{{ especie.nombre }}</p>
             </div>
             <div class="col-4 columna">
-                <a class="btn btn-primary" href="{% url 'especies:Detail' %}" role="button">Ver</a>
+                <a class="btn btn-primary" href="{% url 'especies:Detail' especie.id %}" role="button">Ver</a>
             </div>
         </div>
         {% endfor %}

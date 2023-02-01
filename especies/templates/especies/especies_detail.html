@@ -7,63 +7,76 @@
         <div class="row fila">
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
-
+                    <i class="fa-solid fa-n"></i>
                 </div>
-                <h1>nombre</h1>
-                <p>nombre</p>
+                <h1>Nombre.</h1>
+                <p>{{ object.nombre }}</p>
             </div>
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
-
+                    <i class="fa-solid fa-ranking-star"></i>
                 </div>
-                <h1>año nacimiento</h1>
-                <p>año nacimiento</p>
+                <h1>Clasificación.</h1>
+                <p>{{ object.clasificacion }}</p>
             </div>
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
-
+                    <i class="fa-solid fa-address-book"></i>
                 </div>
-                <h1>genero</h1>
-                <p>genero</p>
+                <h1>Designación.</h1>
+                <p>{{ object.designacion }}</p>
             </div>
         </div>
         <div class="row fila">
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
-
+                    <i class="fa-solid fa-language"></i>
                 </div>
-                <h1>planeta origen</h1>
-                <p>planeta origen</p>
+                <h1>Lenguaje.</h1>
+                <p>{{ object.lenguaje }}</p>
             </div>
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
-
+                    <i class="fa-solid fa-earth-americas"></i>
                 </div>
-                <h1>peliculas</h1>
-                <p>peliculas</p>
+                <h1>Planeta de origen.</h1>
+                <p>{{ object.planeta_origen }}</p>
             </div>
             <div class="col-xs-12 col-md-4 columna">
                 <div class="imagen">
-
+                    <i class="fa-solid fa-people-group"></i>
                 </div>
-                <h1>especie</h1>
-                <p>especie</p>
+                <h1>Personajes que pertenecen a la especie {{ object.nombre }}.</h1>
+                {% if object.devolverPersonajes %}
+                    <div>
+                        <ul>
+                        {% for personaje in object.devolverPersonajes %}
+                        <li>{{ personaje }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% else %}
+                <p>{{ object.nombre }} no tiene ningun personaje</p>
+                {% endif %}
             </div>
         </div>
         <div class="row fila">
-            <div class="col-xs-12 col-md-6 columna">
+            <div class="col-12 columna">
                 <div class="imagen">
-
+                    <i class="fa-solid fa-film"></i>
                 </div>
-                <h1>naves espaciales</h1>
-                <p>naves espaciales</p>
-            </div>
-            <div class="col-xs-12 col-md-6 columna">
-                <div class="imagen">
-
+                <h1>Peliculas en las que aparece la especie {{ object.nombre }}.</h1>
+                <div>
+                    <ul>
+                    {% for pelicula in peliculas %}
+                        {% for especie in pelicula.devolverEspecies %}
+                        {% if object.nombre == especie.nombre %}
+                        <li>{{ pelicula.titulo }}</li>
+                        {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                    </ul>
                 </div>
-                <h1>vehiculos</h1>
-                <p>vehiculos</p>
             </div>
         </div>
     </div>
