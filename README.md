@@ -1,2 +1,3 @@
 # Star wars web
-Proyecto en desarrollo que funcionara como base de datos de personajes, peliculas, planetas, etc...
+
+página web que muestra diversas caracteristicas sobre la saga de peliculas de star wars 
