@@ -22,7 +22,7 @@ página web que muestra diversas caracteristicas sobre los personajes, peliculas
 
 Este proyecto fue realizado con la ayuda de esta [api](https://swapi.dev/) de star wars, de donde se obtuvo toda la información.
   
-## Tecnologías:
+## Tecnologías usadas:
 
 <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
