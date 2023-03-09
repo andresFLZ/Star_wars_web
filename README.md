@@ -21,7 +21,7 @@ You can access it [here](https://www.linkedin.com/in/andr%C3%A9s-felipe-limas-ze
   <image src="https://github.com/andresFLZ/Star_wars_web/blob/main/img/Pag%20detalle%20.png" alt="Detalle">
 </div>
 
-This project was carried out with the help of this star wars [Api](https://swapi.dev/) de star wars, from where all the information was obtained.
+This project was carried out with the help of this star wars [Api](https://swapi.dev/), from where all the information was obtained.
   
 ## Technologies used:
 
