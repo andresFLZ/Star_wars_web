@@ -1,7 +1,7 @@
 # Star wars web
 
 web page that shows various features about the characters, movies, ships and more sections of the star wars movies saga.
-You can access it [here](https://www.linkedin.com/in/andr%C3%A9s-felipe-limas-zea/)
+You can access it [here](http://andreslimas.pythonanywhere.com/)
 
 - It has a home page where all sections can be accessed.
 
