@@ -1,30 +1,32 @@
 # Star wars web
 
-página web que muestra diversas caracteristicas sobre los personajes, peliculas, naves y más apartados de la saga de peliculas de star wars.
+web page that shows various features about the characters, movies, ships and more sections of the star wars movies saga.
+You can access it [here](https://www.linkedin.com/in/andr%C3%A9s-felipe-limas-zea/)
 
-- Cuenta con una página de inicio donde se pueden acceder a todos los apartados.
+- It has a home page where all sections can be accessed.
 
 <div id="img" align="center">
   <image src="https://github.com/andresFLZ/Star_wars_web/blob/main/img/Pag%20inicio.png" alt="Inicio">
 </div>
   
-- Cada apartado cuenta con una pequeña descripción y una lista de cada uno de sus items.
+- Each section has a short description and a list of each of its items.
 
 <div id="img" align="center">
   <image src="https://github.com/andresFLZ/Star_wars_web/blob/main/img/Pag%20personajes.png" alt="Apartado">
 </div>
   
-- Cada item puede verse más a detalle y cuenta con las caracteristicas más relevantes del mismo.
+- Each item can be viewed in more detail and has the most relevant features.
 
 <div id="img" align="center">
   <image src="https://github.com/andresFLZ/Star_wars_web/blob/main/img/Pag%20detalle%20.png" alt="Detalle">
 </div>
 
-Este proyecto fue realizado con la ayuda de esta [api](https://swapi.dev/) de star wars, de donde se obtuvo toda la información.
+This project was carried out with the help of this star wars [Api](https://swapi.dev/) de star wars, from where all the information was obtained.
   
-## Tecnologías usadas:
+## Technologies used:
 
 <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/django/django-plain.svg" title="Django" alt="Django" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-original.svg" title="Bootstrap" alt="Bootstrap" width="40" height="40"/>&nbsp;
