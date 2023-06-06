@@ -1,7 +1,7 @@
 # Star wars web
 
 web page that shows various features about the characters, movies, ships and more sections of the star wars movies saga.
-You can access it [here](http://andreslimas.pythonanywhere.com/)
+You can access it [here](http://limasandres.pythonanywhere.com/)
 
 - It has a home page where all sections can be accessed.
 
